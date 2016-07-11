@@ -99,17 +99,20 @@
 html {
   font-size: 14px;
   font-family: 'Raleway';
+  font-weight: normal;
   color: #2d2d2d;
   text-align: center;
 
 }
  h1 {
      font-family: 'Playfair Display';
+     font-weight: normal;
  }
 
  .container {
    display: inline-block;
    position: relative;
+   max-width: 100%;
  }
 /**************header = logo & cart*/
 
@@ -125,7 +128,7 @@ img.logo {
 img.cart {
   float: right;
   width: 20%;
-  height: 50px;
+  height: 70px;
 
 }
 
@@ -137,13 +140,33 @@ section.box{
   font-size: 20px;
   position: relative;
   width: auto;
-  height: 650px;
+  height: 550px;
   background-image:
-  url(images/banner-girl.png),
   url(images/flower-bkgd.jpg);
+  /*url(images/banner-girl.png),*/
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
+
+
+}
+
+#hero-pic-box {
+  height: 550px;
+  text-align: center;
+}
+
+#hero-pic-inline {
+  height:100%;
+  vertical-align: bottom;
+  display: inline-block;
+  background-color:black;
+  opacity: 0.5;
+}
+
+#hero-pic {
+  height: 500px;
+  vertical-align:bottom;
 }
 
 
@@ -167,11 +190,14 @@ div.hero-text {
 }
 
 
-ul {
+ul{
   display: block;
+  position: relative;
   margin: 20px 20px 20px 20px;
   list-style-type: none;
+  padding: 0px;
 }
+
 
 /*font color for product section*/
 h2.orange {
@@ -186,11 +212,38 @@ section.signup{
   background-position: bottom;
   margin: 20px 0 20px 0;
   color: white;
+  background-color: black;
+  opacity: 0.99;
 }
 div.signuptext {
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%,-50%);
+}
+form.subscribe {
+ display: block;
+
+}
+input[type="email"] {
+  width: 50%;
+  border-style: none;
+  text-align: left;
+  border-radius: 10px;
+  margin: auto;
+  }
+input[type="submit"] {
+  background-color: #e2574c;
+  color: white;
+  width: 20%;
+  position: absolute;
+  border-radius: 10px;
+  text-align: center;
+  border-style: none;
+  margin: auto;
+
+}
+input[type="submit"]:hover {
+    background-color: #b64036;
 }
 
 
@@ -198,18 +251,63 @@ div.signuptext {
 .footer {
   color: white;
   background-color: #242424;
+  position: relative;
 }
 div.contact{
   float:left;
   text-align: left;
   margin-left: 40px;
+  height: auto;
+  position: absolute;
+  top: 50%; left: 20%;
+  transform: translate(-50%,-50%);
+
 }
 div.social{
   float:right;
   text-align: left;
+  padding: 0px;
   position: relative;
+  margin-right: 40px;
 
 }
 p.address {
-  color: #969696
+  color: #969696;
+}
+ul.sociallist li{
+  list-style-type: none;
+  padding: 5px;
+}
+
+
+
+/*tablet& full size*/
+
+@media all and (min-width:600px) {
+div.productimage {
+  display: block;
+  }
+div.productimage ul li{
+    display: inline-block;
+    position: relative;
+
+  }
+html {
+  font-size: 16px;
+  }
+}
+
+
+@media all and (min-width:1240px) {
+div.productimage {
+  display: block;
+  }
+div.productimage ul li{
+    display: inline-block;
+    position: relative;
+
+  }
+html {
+  font-size: 16px;
+  }
 }
